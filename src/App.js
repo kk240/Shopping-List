@@ -1,5 +1,5 @@
 import "./App.css";
-import { AiOutlinePlus, AiFillCheckCircle } from "react-icons/ai";
+import { AiFillCheckCircle } from "react-icons/ai";
 import { TiPlus } from "react-icons/ti";
 import { BsFillCircleFill, BsFillTrashFill } from "react-icons/bs";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
@@ -7,12 +7,11 @@ import { useState } from "react";
 
 function App() {
   const [itemName, setItemName] = useState("");
-  const [isSelected, SetIsSelected] = useState(false);
   const [totalItemCount, settotalItemCount] = useState(0);
   const [items, setItems] = useState([]);
 
   const handelOnAdd = () => {
-    if (itemName == "") {
+    if (itemName === "") {
       alert("enter item name");
       return;
     }
@@ -44,7 +43,7 @@ function App() {
   };
   const handleDelete = (index) => {
     const newItems = [...items];
-    if (index == 0) {
+    if (index === 0) {
       newItems.splice(index - 1, 1);
     } else {
       newItems.splice(index, 1);
@@ -72,7 +71,7 @@ function App() {
       {items.map((item, index) => {
         return (
           <div className="item-box" key={index}>
-            {item.isSelected == false ? (
+            {item.isSelected === false ? (
               <div className="item-name">
                 <BsFillCircleFill
                   onClick={() => handleCheck(index)}
