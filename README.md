@@ -24,8 +24,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL:
-- Live Site URL:
+- Solution URL: https://kk240.github.io/Product-preview/
+- Live Site URL: https://kk240.github.io/Product-preview/
 
 ### Built with
 
